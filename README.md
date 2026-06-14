@@ -114,4 +114,41 @@ Permite identificar colaboradores sobrecarregados ou ociosos.
 ### 1. Clonar o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/gvalepatriota-creator/gestao-atividades.git
+```
+
+### 2. Acessar o projeto
+
+```bash
+cd gestao-atividades
+```
+
+### 3. Instalar dependências
+
+```bash
+npm install
+```
+
+### 4. Configurar o banco de dados
+
+```bash
+npx prisma migrate dev
+```
+
+### 5. Popular o banco com dados iniciais
+
+```bash
+npm run seed
+```
+
+### 6. Executar aplicação
+
+```bash
+npm run dev
+```
+
+### 7. Abrir no navegador
+
+```text
+http://localhost:3000
+```
