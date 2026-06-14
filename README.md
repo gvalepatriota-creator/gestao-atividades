@@ -143,3 +143,49 @@ npm run dev
 ```text
 http://localhost:3000
 ```
+
+## Decisões de Escopo
+
+Durante o desenvolvimento, foi priorizada a entrega de uma solução funcional que resolvesse os principais problemas de gestão apresentados no cenário proposto: acompanhamento de atividades, controle de prazos, distribuição de trabalho e visibilidade operacional.
+
+Para garantir a conclusão da solução dentro do prazo disponível, algumas funcionalidades foram propositalmente deixadas fora da primeira versão:
+
+* Edição de tarefas já cadastradas;
+* Histórico de alterações das atividades;
+* Notificações de prazo e lembretes automáticos;
+* Dashboard com gráficos e visualizações avançadas;
+* Autenticação e controle de acesso por usuário;
+* Filtros combinados por status, prioridade e período;
+* Comentários e anexos em tarefas.
+
+A decisão foi concentrar esforços na implementação do fluxo principal de gestão, garantindo estabilidade, simplicidade de uso e clareza na tomada de decisão.
+
+## Evoluções Futuras
+
+Caso houvesse mais tempo para desenvolvimento, as próximas funcionalidades priorizadas seriam:
+
+1. **Edição de tarefas**
+
+   * Permitir atualização de título, descrição, responsável, prioridade e prazo.
+
+2. **Dashboard analítico**
+
+   * Inclusão de gráficos de produtividade, distribuição de carga de trabalho e evolução das atividades ao longo do tempo.
+
+3. **Sistema de notificações**
+
+   * Alertas para tarefas próximas do vencimento ou em atraso.
+
+4. **Autenticação e perfis de acesso**
+
+   * Diferentes permissões para gestores e colaboradores.
+
+5. **Filtros avançados**
+
+   * Pesquisa por colaborador, prioridade, status e período.
+
+6. **Histórico de atividades**
+
+   * Registro das alterações realizadas em cada tarefa para fins de acompanhamento e auditoria.
+
+Essas melhorias tornariam a plataforma mais robusta, mantendo a proposta principal de fornecer ao gestor uma visão clara e centralizada da operação da equipe.
