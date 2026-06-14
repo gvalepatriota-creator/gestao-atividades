@@ -1,26 +1,101 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: #f4f6f8;
+  color: #1f2937;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.danger-button {
+  background: #dc2626;
+  color: white;
+}
+
+.success-button {
+  background: #16a34a;
+  color: white;
+}
+
+.kpi-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 24px 0 40px;
+}
+
+.kpi-card {
+  min-width: 160px;
+  padding: 20px;
+}
+
+.kpi-card h3 {
+  margin: 0 0 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.kpi-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.kanban {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.kanban-column {
+  flex: 1;
+}
+
+.task-card {
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.task-card p {
+  margin: 6px 0;
+}
+
+.page-title {
+  font-size: 36px;
+  margin-bottom: 10px;
 }

@@ -8,10 +8,16 @@ export default async function Home({
   searchParams: Promise<{ userId?: string }>;
 }) {
   const params = await searchParams;
-  const tasks = await prisma.task.findMany({
-  where: params.userId
+
+const selectedUserId =
+  params.userId && params.userId !== "todos"
+    ? Number(params.userId)
+    : undefined;
+const selectedUserIdString = selectedUserId ? String(selectedUserId) : "todos";
+const tasks = await prisma.task.findMany({
+  where: selectedUserId
     ? {
-        userId: Number(params.userId),
+        userId: selectedUserId,
       }
     : {},
   include: {
@@ -49,64 +55,42 @@ export default async function Home({
 
   return (
     <main
-  style={{
-    padding: "40px",
-    backgroundColor: "#f5f6fa",
-    minHeight: "100vh",
-    fontFamily: "Arial, sans-serif",
-  }}
 >
-      <h1
-  style={{
-    fontSize: "36px",
-    marginBottom: "10px",
-  }}
->
+      <h1 className="page-title">
   📋 Gestão de Atividades
 </h1>
 <div style={{ marginTop: "20px", marginBottom: "20px" }}>
   <a href="/nova-tarefa">
     <button>Criar nova tarefa</button>
   </a>
-  <UserFilter users={users} />
+  <UserFilter users={users} selectedUserId={selectedUserIdString} />
 </div>
-      <div style={{ display: "flex", gap: "20px", marginTop: "20px", marginBottom: "40px" }}>
-        <div style={{ border: "1px solid #ddd",
-borderRadius: "12px",
-boxShadow: "0 2px 8px rgba(0,0,0,0.08)", padding: "20px" }}>
-          <h3>Total</h3>
-          <p>{totalTasks}</p>
-        </div>
+     <div className="kpi-grid">
+  <div className="card kpi-card">
+    <h3>Total</h3>
+    <p>{totalTasks}</p>
+  </div>
 
-        <div style={{ border: "1px solid #ddd",
-borderRadius: "12px",
-boxShadow: "0 2px 8px rgba(0,0,0,0.08)", padding: "20px" }}>
-          <h3>Concluídas</h3>
-          <p>{completedTasks}</p>
-        </div>
+  <div className="card kpi-card">
+    <h3>Concluídas</h3>
+    <p>{completedTasks}</p>
+  </div>
 
-        <div style={{border: "1px solid #ddd",
-borderRadius: "12px",
-boxShadow: "0 2px 8px rgba(0,0,0,0.08)", padding: "20px" }}>
-          <h3>Pendentes</h3>
-          <p>{pendingTasks}</p>
-        </div>
+  <div className="card kpi-card">
+    <h3>Pendentes</h3>
+    <p>{pendingTasks}</p>
+  </div>
 
-        <div style={{ border: "1px solid #ddd",
-borderRadius: "12px",
-boxShadow: "0 2px 8px rgba(0,0,0,0.08)", padding: "20px" }}>
-          <h3>Em andamento</h3>
-          <p>{inProgressTasks}</p>
-        </div>
+  <div className="card kpi-card">
+    <h3>Em andamento</h3>
+    <p>{inProgressTasks}</p>
+  </div>
 
-        <div style={{ border: "1px solid #ddd",
-borderRadius: "12px",
-boxShadow: "0 2px 8px rgba(0,0,0,0.08)", padding: "20px" }}>
-          <h3>Atrasadas</h3>
-          <p>{overdueTasks}</p>
-        </div>
-      </div>
-
+  <div className="card kpi-card">
+    <h3>Atrasadas</h3>
+    <p>{overdueTasks}</p>
+  </div>
+</div>
       <h2>Carga da Equipe</h2>
 
       <div style={{ display: "flex", gap: "20px", marginBottom: "40px" }}>
