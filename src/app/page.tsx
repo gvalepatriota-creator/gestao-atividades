@@ -56,9 +56,7 @@ const tasks = await prisma.task.findMany({
   return (
     <main
 >
-      <h1 className="page-title">
-  📋 Gestão de Atividades
-</h1>
+      <h1 className="page-title">📊 SeuGestor</h1>
 <div style={{ marginTop: "20px", marginBottom: "20px" }}>
   <a href="/nova-tarefa">
     <button>Criar nova tarefa</button>

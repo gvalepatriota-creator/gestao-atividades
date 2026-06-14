@@ -1,23 +1,14 @@
-# Gestão de Atividades de Equipe
+# SeuGestor — Plataforma de Gestão de Atividades
 
-Sistema desenvolvido para o desafio técnico da Quatro5.
+Ricardo é gestor de uma pequena empresa e enfrenta um desafio comum em equipes em crescimento: acompanhar o andamento das atividades, distribuir demandas de forma equilibrada e garantir que os prazos sejam cumpridos.
 
-O objetivo da aplicação é ajudar gestores a organizar, acompanhar e visualizar o trabalho da equipe através de indicadores e uma visão centralizada das atividades.
+Com o aumento do volume de trabalho, tornou-se cada vez mais difícil manter visibilidade sobre o que está sendo executado, identificar gargalos operacionais e entender quais colaboradores estão sobrecarregados ou com baixa utilização. Como consequência, decisões importantes passaram a depender de informações dispersas e de acompanhamentos manuais.
 
----
+O SeuGestor foi desenvolvido para resolver esse cenário, oferecendo uma plataforma simples e intuitiva para gestão de atividades. Através de uma visualização baseada em Kanban, o sistema permite registrar tarefas, definir responsáveis, acompanhar prioridades, monitorar prazos e visualizar indicadores operacionais em tempo real.
 
-## Problema
+Além da organização das atividades, a solução fornece métricas que apoiam a tomada de decisão, permitindo ao gestor acompanhar o volume de trabalho da equipe, identificar tarefas atrasadas e analisar a distribuição das demandas entre os colaboradores.
 
-O desafio apresenta o caso de Ricardo, gestor de uma empresa que enfrenta dificuldades para acompanhar o trabalho da equipe.
-
-As principais dores identificadas são:
-
-- Falta de visibilidade das atividades em andamento
-- Distribuição desigual de trabalho entre colaboradores
-- Perda de prazos
-- Falta de indicadores para tomada de decisão
-
-A solução proposta busca resolver essas dores através de um sistema simples de gestão baseado em Kanban.
+Dessa forma, o SeuGestor transforma informações operacionais em uma visão clara e centralizada do trabalho da equipe, proporcionando maior controle, produtividade e previsibilidade na gestão.
 
 ---
 
